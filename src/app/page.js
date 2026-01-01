@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -7,7 +8,8 @@ export default function Home() {
       id: 1,
       name: "Echo Me - Affirmations App",
       description: "Reflect Your Best Self with Echo Me.", 
-      icon: "/echomeapp.png"
+      icon: "/echomeapp.png",
+      url: "/echome"
     }
   ];
 
@@ -29,7 +31,7 @@ export default function Home() {
 
       <main className={styles.grid}>
         {apps.map((app) => (
-          <div key={app.id} className={styles.card}>
+          <Link key={app.id} href={app.url} className={styles.card}>
             <Image
               src={app.icon}
               alt={`${app.name} icon`}
@@ -44,7 +46,7 @@ export default function Home() {
             <div className={styles.arrow}>
               →
             </div>
-          </div>
+          </Link>
         ))}
       </main>
     </div>
