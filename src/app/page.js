@@ -5,9 +5,9 @@ export default function Home() {
   const apps = [
     {
       id: 1,
-      name: "Echo Me",
-      description: "A powerful voice echoing application.", // Placeholder description
-      icon: "EM" // Placeholder for icon if we don't have one
+      name: "Echo Me - Affirmations App",
+      description: "Reflect Your Best Self with Echo Me.", 
+      icon: "/echomeapp.png"
     }
   ];
 
@@ -17,21 +17,26 @@ export default function Home() {
         <Image
           src="/logo.png"
           alt="The App Library Logo"
-          width={120}
-          height={120}
+          width={300}
+          height={253}
           className={styles.logo}
           priority
+          style={{ height: "auto" }}
         />
-        <h1 className={styles.title}>The App Library</h1>
+        {/* Title removed as it is in the logo */}
         <p className={styles.subtitle}>Curated collection of our finest apps</p>
       </header>
 
       <main className={styles.grid}>
         {apps.map((app) => (
           <div key={app.id} className={styles.card}>
-            <div className={styles.appIconPlaceholder}>
-              {app.icon}
-            </div>
+            <Image
+              src={app.icon}
+              alt={`${app.name} icon`}
+              width={60}
+              height={60}
+              className={styles.appIcon}
+            />
             <div className={styles.appContent}>
               <h2 className={styles.appName}>{app.name}</h2>
               <p className={styles.appDescription}>{app.description}</p>
