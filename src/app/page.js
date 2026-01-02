@@ -7,7 +7,7 @@ export default function Home() {
     {
       id: 1,
       name: "Echo Me - Affirmations App",
-      description: "Reflect Your Best Self with Echo Me.", 
+      description: "Reflect Your Best Self", 
       icon: "/echomeapp.png",
       url: "/echome"
     }
@@ -17,17 +17,20 @@ export default function Home() {
     <div className={styles.container}>
       <header className={styles.header}>
         <Image
-          src="/logo.png"
-          alt="The App Library Logo"
-          width={300}
-          height={253}
-          className={styles.logo}
+          src="/logo_banner.png"
+          alt="The App Library Banner"
+          width={600}
+          height={200}
+          className={styles.banner}
           priority
-          style={{ height: "auto" }}
+          style={{ width: "100%", height: "auto" }}
         />
         {/* Title removed as it is in the logo */}
-        <p className={styles.subtitle}>Curated collection of our finest apps</p>
       </header>
+
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.sectionTitle}>App Portfolio</h2>
+      </div>
 
       <main className={styles.grid}>
         {apps.map((app) => (
@@ -35,16 +38,13 @@ export default function Home() {
             <Image
               src={app.icon}
               alt={`${app.name} icon`}
-              width={60}
-              height={60}
+              width={100}
+              height={100}
               className={styles.appIcon}
             />
             <div className={styles.appContent}>
-              <h2 className={styles.appName}>{app.name}</h2>
+              <h3 className={styles.appName}>{app.name}</h3>
               <p className={styles.appDescription}>{app.description}</p>
-            </div>
-            <div className={styles.arrow}>
-              →
             </div>
           </Link>
         ))}

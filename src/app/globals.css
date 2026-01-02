@@ -1,17 +1,10 @@
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --primary-accent: #3b82f6; /* A nice blue */
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --font-geist-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Fallback */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: rgb(241, 241, 236);
+  --foreground: #171717;
+  --primary-accent: #3b82f6;
+  --card-bg: #ffffff;
+  --card-border: #e5e5e5;
+  --font-geist-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 html,
