@@ -2,7 +2,7 @@
   --background: rgb(241, 241, 236);
   --foreground: #171717;
   --primary-accent: #3b82f6;
-  --card-bg: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.6);
   --card-border: #e5e5e5;
   --font-geist-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
